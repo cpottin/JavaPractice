@@ -4,6 +4,10 @@ import java.util.*;
 import javax.swing.*;
 
 public class TicTacToeGame implements ActionListener {
+     public static void main(String[] args) {
+        TicTacToeGame ticTacToeGame = new TicTacToeGame();
+
+    }
     Random random = new Random();
     JFrame frame = new JFrame();
     JPanel title_panel = new JPanel();
