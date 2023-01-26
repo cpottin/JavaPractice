@@ -1,6 +1,6 @@
 public class MergeSort {
     public static void mergeSort(int[] array) {
-        //arrayLength is the length of the array this will be passed into the method when called
+        //arrayLength is the length we will be using this value to calculate the middle point
         int arrayLength = array.length;
         //base condition, if the array length is 1 it will just return
         //for the rest of the cases, the recursive call will be executed
@@ -16,11 +16,11 @@ public class MergeSort {
         //right sub array, length minus mid, with example 5 elements
         int[] rightArray = new int[arrayLength - mid];
 
-        //loop left array, filling up the left half of the array
+        //loop filling up the left half of the array
         for (int i = 0; i < mid; i++) {
             leftArray[i] = array[i];
         }
-        //loop right array, filling up the right half of the array
+        //loop filling up the right half of the array, start at mid point
         for (int i = mid; i < arrayLength; i++) {
             rightArray[i - mid] = array[i];
         }
@@ -62,6 +62,7 @@ public class MergeSort {
             i++;
             k++;
         }
+        //copy what is remaining in the right array into the original array
         while (j < right) {
             a[k] = r[j];
             j++;
